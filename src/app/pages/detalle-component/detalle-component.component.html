@@ -1,0 +1,27 @@
+<div class="detalles-container">
+  <div class="producto-container">
+    <div class="producto-img">
+    <p-image class="foto" src={{dataproduct.urlImagen}} alt="Image"  width="100%" [preview]="true"></p-image>
+  </div>
+    <div class="producto-detalles">
+      <div class="producto-caracteristicas">
+        <h2 class="nombre-producto">{{dataproduct.nombre}}</h2>
+        <h2 class="descripcion">{{dataproduct.descripcion}}</h2>
+        <div class="detalles-caja">
+          <h3 class="deta" ><strong>PROCESADOR:</strong> {{dataproduct.procesador}}</h3>
+          <h3 class="deta"><strong>RAM:</strong> {{dataproduct.ram}}</h3>
+          <h3 class="deta"><strong>ALMACENAMIENTO:</strong> {{dataproduct.rom}} </h3>
+          <h3 class="deta"><strong>PANTALLA: </strong> {{dataproduct.pantalla}}</h3>
+          <h3 class="deta"><strong>BATERIA: </strong> {{dataproduct.bateria}}</h3>
+          <h3 class="deta"><strong>CAMARA: </strong> {{dataproduct.camara}}</h3>
+        </div>
+      </div>
+      <div class="producto-precio">
+        <h1>PRECIO:</h1>
+        <h1>S/.{{dataproduct.precio}}</h1>
+        <button (click)="redirigir()" class="" [disabled]="!logeado">Cotizar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

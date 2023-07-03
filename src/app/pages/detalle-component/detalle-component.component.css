@@ -1,0 +1,62 @@
+*{
+
+}
+.detalles-container{
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto-container{
+  width: 80vw;
+  height: 550px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 5em;
+  display: flex;
+  padding: 3em  4em;
+}
+.producto-detalles{
+  width: 60%;
+  display: flex;
+}
+.producto-img{
+  width: 40%;
+}
+.producto-caracteristicas{
+  width: 50%;
+}
+.producto-precio{
+  width: 50%;
+}
+.nombre-producto{
+  font-weight: 700;
+}
+.descripcion{
+  font-weight: 400;
+  font-size: 14px;
+}
+.deta {
+  font-weight: 400;
+  font-size: 14px;
+}
+.descripcion-telefono{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.producto-precio h1{
+  font-weight: 700;
+  color: #094D9F;
+
+}
+.producto-precio button{
+  background: #094D9F;
+  color: white;
+  border-radius: 50px;
+  width: 250px;
+  padding: .5em;
+}

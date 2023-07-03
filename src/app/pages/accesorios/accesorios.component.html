@@ -1,0 +1,24 @@
+<div class="container-smartphones">
+  <div class="container-banner">
+    <img src="https://i.blogs.es/b08c5b/realme-6-pro-06/1366_2000.jpg" alt="Smartphonesrealme">
+  </div>
+  <div class="container-telefonos">
+    <div class="container-detalles">
+      <h1>Telefonos realme</h1>
+      <div class="telefonos">
+        <div *ngFor="let item of data" class="telefono-content">
+          <div class="telefono-detalles">
+            <h2 class="nombre-telefono">{{item.nombre}}</h2>
+            <h3 class="descripcion-telefono">{{item.descripcion}}</h3>
+            <h3 class="precio-telefono">S/.{{item.precio}}</h3>
+            <a class="cotiza-telefono" (click)="redirigirDetalle(item)"> Cotiza</a>
+          </div>
+          <div class="telefono-img">
+            <img src="{{item.imgAccesorios}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

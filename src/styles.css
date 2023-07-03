@@ -1,0 +1,16 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", serif;
+
+}
+.rc-anchor-normal{
+  width: 150px !important;
+}
+:host::ng-deep .rc-anchor-normal{
+  width: 150px !important;
+}
+a{
+  cursor: pointer;
+}

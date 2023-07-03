@@ -1,0 +1,49 @@
+<div class="contenedor-principal flex flex-">
+  <div class="carousel-container">
+    <ngb-carousel>
+      <ng-template *ngFor="let image of images; let i = index" ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="{{image.img}}" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h1>{{image.text}}</h1>
+          <p>{{image.subtext}}</p>
+          <a (click)="redirigirRealme()"  *ngIf="i === 0"  class="btn-conocenos">{{image.btn}}</a>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div id="contenedor-productos">
+    <div class="productos">
+      <div class="container-productos"><p-carousel [value]="masVendidos" [numVisible]="3" [numScroll]="3" [circular]="true"  [responsiveOptions]="responsiveOptions" [autoplayInterval]="2000" >
+        <ng-template pTemplate="header">
+          <h1 style="color: white;">LOS MÁS VENDIDOS</h1>
+        </ng-template>
+        <ng-template let-product pTemplate="item">
+          <div class="product-item">
+            <div class="product-item-content">
+              <div class="mb-3">
+                <img src="{{product.urlImagen}}" [alt]="product.urlImagen" class="product-image" width="250px" />
+              </div>
+              <div>
+                <h4 class="mb-1">{{product.nombre}}</h4>
+                <h6   class=" mt-0 mb-3 precio-telefono">S/.{{product.precio}}</h6>
+              </div>
+              <div class="cotizar-producto">
+                <a class="cotiza-telefono"  (click)="redirigirDetalle(product)">Cotizar</a>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+
+
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,20 @@
+<div class="detalles-container">
+  <div class="producto-container">
+    <div class="producto-img">
+      <p-image class="foto" src={{dataccesorio.imgAccesorios}} alt="Image"  width="100%" [preview]="true"></p-image>
+    </div>
+    <div class="producto-detalles">
+      <div class="producto-caracteristicas">
+        <h2 class="nombre-producto">{{dataccesorio.nombre}}</h2>
+        <h2 class="descripcion">{{dataccesorio.detalles}}</h2>
+
+      </div>
+      <div class="producto-precio">
+        <h1>PRECIO:</h1>
+        <h1>S/.{{dataccesorio.precio}}</h1>
+        <button (click)="redirigir()" class="" [disabled]="!logeado">Cotizar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

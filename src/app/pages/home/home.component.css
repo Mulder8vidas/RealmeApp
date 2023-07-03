@@ -1,0 +1,141 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+.contenedor-principal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background:#14161F;
+}
+
+.picsum-img-wrapper img {
+  margin-top: 100px;
+  width: 100vw;
+  height: 650px;
+}
+
+.carousel-caption h1 {
+  font-size: 50px;
+  font-weight: 700;
+
+}
+
+.carousel-caption {
+  min-width: 300px;
+  width: 470px;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  height: 200px;
+
+}
+
+.btn-conocenos {
+  color: white;
+  text-decoration: none;
+  border: solid 2px white;
+  padding: .5em 2em;
+  border-radius: 50px;
+}
+
+.btn-conocenos:hover {
+  color: #000;
+  background: white;
+}
+
+.caja-productos img {
+  width: 200px;
+}
+
+img {
+  overflow-x: hidden !important;
+}
+
+.carousel {
+  width: 98.9vw;
+}
+
+.container-productos {
+  width:70vw;
+  text-align: center;
+
+
+}
+.product-item-content{
+  border:1px solid #212529;
+  margin: .3em;
+  background: white;
+  position: relative;
+}
+
+
+.productos{
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.cotizar-producto {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFCB11;
+  height: 4em;
+
+}
+.product-item-content:hover{
+  border:2px solid #094D9F;
+}
+.product-item-content:hover .cotizar-producto {
+  background: #094D9F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cotizar-producto a{
+  font-weight: 700;
+  font-size: 14px;
+  background:#FFCB11 ;
+  color:   #212538;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: .5em 3em;
+}
+.precio-telefono{
+  font-size: 20px;
+  padding: .5em 0;
+  margin: 0 4em;
+
+  border-radius: 50px;
+  background: #0984e3;
+  color: white;
+  text-align: center;
+}
+.cotiza-telefono {
+
+  font-weight: 700;
+  font-size: 20px;
+  padding: .3em 1.6em;
+  border-radius: 30px;
+  background: #ffca00;
+  color: #212538;
+  text-align: center;
+}
+
+@media (max-width:560px) {
+ .container-productos{
+ width:98vw;}
+}

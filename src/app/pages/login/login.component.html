@@ -1,0 +1,49 @@
+<div class="container-login">
+
+  <div class="caja-login">
+    <div class="container-caja">
+      <div class="login-inicio flex justify-center flex-col mt-4">
+
+      </div>
+
+      <form [formGroup]="form" #LoginInformation (ngSubmit)="Login()">
+        <div class="">
+          <div class="title-login">
+          <h1>Login</h1>
+          </div>
+          <div class="cajadata">
+          <span>Usuario:</span>
+          <div class="caja-datos">
+            <label><i class="fa-solid fa-user"></i></label>
+            <input formControlName="email" class="form-control" type="text" placeholder="usuario@sistema.com ">
+          </div>
+          </div>
+          <span>Contraseña:</span>
+          <div class="caja-datos">
+            <label> <i class="fa-solid fa-lock"></i></label>
+            <input formControlName="password" class="form-control" type="password" placeholder="Ingrese su clave">
+          </div>
+        </div>
+        <form #formcaptcha="ngForm" class="captcha">
+          <div class="row mt-3 " *ngIf="this.token.length==0 ">
+            <div class="captch">
+              <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required
+                          [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+              <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
+                <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="btn">
+          <div class="boton-login">
+            <button class="btn btn-md btn-primary btn-style" [disabled]="this.token.length==0"
+                    [ngStyle]="{opacity:this.token.length==0?'.7':'1'}">Login
+            </button>
+            <span class="registro">No tienes una cuenta? <a (click)="redirigirRegistro()" >REGISTRATE AQUI</a></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
